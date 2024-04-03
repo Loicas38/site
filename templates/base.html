@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF -8">
+    <meta http-equiv="X-UA-compatible" content ="IE = edge">
+    <meta name = "viewport" content = "widht = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block css %}{% endblock %}
+    <title> </title>
+</head>
+<nav id = "navbar">
+    <!-- <image src => -->
+    <ul id = "navbar-items">
+        <li class = "navbar-item">
+            <a href="{{ url_for('index') }}"> Accueil </a>
+        </li>
+        <li class="navbar-item">
+            <a href="{{ url_for('affichage_lieux') }}"> Rechercher </a>
+        </li>
+        <li class="navbar-item login-logout">
+            {%if 'nom_utilisateur'  in session %}
+                <a href="{{ url_for('deconnexion') }}"> Déconnexion </a>
+            {% else %}
+                <a href="{{ url_for('connexion') }}"> Connexion </a>
+            {% endif %}
+        </li>
+        <li class="navbar-item">
+            {%if 'nom_utilisateur'  in session %}
+                <a href="{{ url_for('ajout_lieu') }}"> Ajouter un lieu </a>
+            {% else %}
+                <a href="{{ url_for('connexion') }}"> Ajouter un lieu </a>
+            {% endif %}
+        </li>
+    </ul>
+</nav>
+
+<div id = "container">
+    {% block content %} {% endblock %}
+</div>
+
+
+
+</html>

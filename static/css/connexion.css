@@ -1,0 +1,29 @@
+/* Bordered form */
+form {
+  border: 3px solid #99e0f5;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+    a#crea {
+        display: auto;
+        margin: auto;
+        text-decoration: none;
+        color: black ;
+        background-color: lightskyblue;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+     a#crea:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }

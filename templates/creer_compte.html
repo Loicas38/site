@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cree_compte.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>Création d'un compte</h1>
+<form action="{{ url_for('creation') }}" method="POST">
+    <p>
+        <!-- Champ de type "text" -->
+        <label for="nom"> Nom : </label>
+        <input type="text" name="nom" id="nom" required, autofocus>
+    </p>
+
+    <p>
+        <!-- Champ de type "text" -->
+        <label for="mail"> Addresse Mail : </label>
+        <input type="text" name="mail" id="mail" required>
+    </p>
+
+    <p>
+        <!-- Champ de type "password" -->
+        <label for="mdp"> Password : </label>
+        <input type="password" name="mdp" id="mdp" required>
+    </p>
+    <p>
+        <!-- Bouton d'envoi du formulaire -->
+        <input type="submit" value="Valider">
+        <!-- <button type="submit"> Valider </button> -->
+    </p>
+    <p>
+        {%if erreur not None%}
+            {{ erreur }}
+        {%endif%}
+    </p>
+    <p>
+        Déjà un compte ? :
+        <a href="{{ url_for('connexion') }}" id="connex"> Se connecter </a>
+    </p>
+
+</form>
+{% endblock %}

@@ -1,0 +1,79 @@
+body {
+    background-color:aliceblue;
+    margin: 0;
+}
+
+#navbar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: rgb(145,222,245);
+    background: linear-gradient(90deg, rgba(145,222,245,0.9934174353335085) 0%, rgba(231,253,255,1) 47%, rgba(255,255,255,1) 100%);
+    font-size: 1.1em;
+    color: #333;
+}
+
+#navbar-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+.navbar-item {
+    margin: 0 10px;
+}
+
+.navbar-item.login-logout {
+    margin-left: auto;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    display: block;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-item a:hover {
+    color: #fcfcfc;
+}
+
+#container {
+    margin: 20px 50px;
+}
+
+
+
+.parent {
+  display: flex;
+  height: 300px; /* Or whatever */
+}
+
+.child {
+  width: 100px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: auto;  /* Magic! */
+}
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  column-gap: 30px;
+}
+
+
+
+

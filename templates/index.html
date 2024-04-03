@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% block content %}
+    <body>
+        <div class="flex-container">
+            {% for lieu in lieux %}
+                <div class="flex-item">
+                    <p>
+                    <h2> {{ lieu.NOM }} </h2>
+                    <bold>catégorie:</bold> {{ lieu.TYPE }} <br>
+                    <bold>note:</bold> {{ lieu.NOTE }}/10 <br>
+
+                    <bold>Horaires: </bold>
+                    {{ lieu.HORAIRES }}
+
+                    <br><br>
+
+                    <bold>Contact: </bold>
+                    <ul>
+                        <li>téléphone: {{ lieu.TELEPHONE }}</li>
+                        <li>mail: <a href="mailto:{{ lieu.MAIL }}">{{ lieu.MAIL }}</a></li>
+                        <li>adresse: {{ lieu.ADRESSE }}</li>
+                    </ul>
+
+                    <br>
+
+                    créé par: {{ lieu.CREATEUR }}
+
+                    </p>
+
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+{% endblock %}

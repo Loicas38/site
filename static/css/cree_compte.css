@@ -1,0 +1,15 @@
+ a#connex {
+    display: auto;
+    margin: auto;
+    text-decoration: none;
+    color: black ;
+    background-color: lightskyblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+ a#connex:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% block content %}
+    <head> <h1> Ajouter un lieu : </h1> </head>
+    <body>
+        <form action="{{ url_for('ajout_lieu_bdd') }}" method="POST">
+            <p>
+                <label for="nom_lieu"> Nom : </label>
+                <input type="text" name="nom_lieu" id="nom_lieu" required autofocus>
+            </p>
+            <p>
+                <label for="type_lieu"> Type : </label>
+                <select name = "type_lieu" id = "type_lieu" required>
+                    <option value = "resto"> Restaurant </option>
+                    <option value = "fast_food"> Fast Food </option>
+                    <option value = "shop"> Magasin </option>
+                    <option value = "pizz"> Pizzeria </option>
+                    <option value = "tac"> Tacos </option>
+                    <option value = "caf"> Café </option>
+                    <option value = "autre"> Autre </option>
+                </select>
+            </p>
+            <p>
+                <label for="horraire_mat"> Horraire d'ouverture du matin : </label>
+                de <input type="int" name="horraire_mat" id="horraire_mat" required>h à <input type="int" name="horraire_mat" id="horraire_mat" required>h
+            </p>
+            <p>
+                <label for="horraire_aprem"> Horraire d'ouverture de l'après-midi : </label>
+                de <input type="int" name="horraire_aprem" id="horraire_aprem" required>h à <input type="int" name="horraire_mat" id="horraire_mat" required>h
+            </p>
+            <p>
+                <label for="mail"> Adresse mail : </label>
+                <input type="text" name="mail" id="horraire_aprem" required>
+            </p>
+            <p>
+                <label for="tel_lieu"> Numéro de Téléphone :</label>
+                <input type="text" name="tel_lieu" id="tel_lieu" required>
+            </p>
+
+            <p>
+                <input type = "submit", value = "Valider">
+            </p>
+
+        </form>
+
+    </body>
+{% endblock %}

@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/connexion.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>Page de connexion</h1>
+<form action="{{ url_for('connexion') }}" method="POST">
+    <p>
+        <!-- Champ de type "text" -->
+        <label for="nom"> Nom : </label>
+        <input type="text" name="nom" id="nom" required autofocus>
+    </p>
+    <p>
+        <!-- Champ de type "password" -->
+        <label for="mdp"> Password : </label>
+        <input type="password" name="mdp" id="mdp" required>
+    </p>
+    <p>
+        <!-- Bouton d'envoi du formulaire -->
+        <input id = "valider" type="submit" value="Valider">
+        <!-- <button type="submit"> Valider </button> -->
+    </p>
+    <p>
+        Pas de compte ? :
+        <a href="{{ url_for('creation') }}" id="crea"> Créer un compte </a>
+    </p>
+</form>
+{% endblock %}
